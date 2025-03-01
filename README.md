@@ -15,6 +15,10 @@ To use this project, follow these steps:
 
 ## Usage
 
+Important Note for Users in Iran
+
+Due to internet restrictions in Iran, users may need to use a VPN to access the Tomorrow.io API and use this project.
+
 The project provides the following commands:
 
 - `get`: Retrieves the current weather for a specified city.
@@ -24,38 +28,54 @@ The project provides the following commands:
 Example usage:
 
 ```shell
-$ python main.py get New York
-Current weather in New York:
-  Temperature: 22°C
-  Feels like: 20°C
-  Humidity: 60%
-  Wind speed: 10 km/h
-  Wind direction: NW
-  Cloud cover: 20%
-  Precipitation probability: 0%
-  Visibility: 10 km
+$ python main.py get sanandaj -n
+returned cache
 
-$ python main.py get -t New York
-Today's weather forecast in New York:
-  Temperature: 25°C
-  Feels like: 23°C
-  Humidity: 50%
-  Wind speed: 15 km/h
-  Wind direction: NW
-  Cloud cover: 30%
-  Precipitation probability: 10%
-  Visibility: 15 km
+sanandaj now:
++---------------------------+----------+
+| Weather Condition         | Value    |
++===========================+==========+
+| Temperature               | -2.1°C   |
++---------------------------+----------+
+| Feels Like                | -2.1°C   |
++---------------------------+----------+
+| Humidity                  | 78%      |
++---------------------------+----------+
+| Wind Speed                | 0.5 m/s  |
++---------------------------+----------+
+| Wind Direction            | 349°     |
++---------------------------+----------+
+| Cloud Cover               | 35%      |
++---------------------------+----------+
+| Precipitation Probability | 0%       |
++---------------------------+----------+
+| Visibility                | 15.82 km |
++---------------------------+----------+
 
-$ python main.py get -x New York
-Tomorrow's weather forecast in New York:
-  Temperature: 28°C
-  Feels like: 26°C
-  Humidity: 40%
-  Wind speed: 20 km/h
-  Wind direction: NW
-  Cloud cover: 40%
-  Precipitation probability: 20%
-  Visibility: 20 kmk
+$ python main.py get -x shiraz
+not in cache
+added cache
+
+shiraz tomorrow:
++---------------------------+-------------+
+| Weather Condition         | Value       |
++===========================+=============+
+| Temperature               | 10.3 | -2°C |
++---------------------------+-------------+
+| Feels Like                | 3.3°C       |
++---------------------------+-------------+
+| Humidity                  | 39%         |
++---------------------------+-------------+
+| Wind Speed                | 2.7 m/s     |
++---------------------------+-------------+
+| Wind Direction            | 275°        |
++---------------------------+-------------+
+| Cloud Cover               | 0%          |
++---------------------------+-------------+
+| Precipitation Probability | 0%          |
++---------------------------+-------------+
+| Visibility                | 16 km       |
++---------------------------+-------------+
 ```
 
 ## Project Structure
