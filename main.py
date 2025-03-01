@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import real_time_weather
-import forcast_weather
+import components.real_time_weather as real_time_weather
+import components.forcast_weather as forcast_weather
 
 
 def cli():
@@ -27,7 +27,7 @@ def cli():
 
 
 def main():
-    import cache
+    import components.cache as cache
 
     cache.clean_cahe()
 
