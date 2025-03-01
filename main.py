@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import real_time_weather
+import forcast_weather
+
 
 def cli():
     user_input = (
@@ -9,24 +12,25 @@ def cli():
 
     try:
         args = parser.parse_args(user_input)
-        print(*[f"{k}={v}" for k, v in vars(args).items()])
     except SystemExit as ex:
         print(ex)
         return -1
 
-    if args.now:
-        pass
-    elif args.today:
-        pass
+    if args.today:
+        forcast_weather.weather_forcast(api_key, args.city_name, "t")
     elif args.next_day:
-        pass
+        forcast_weather.weather_forcast(api_key, args.city_name, "x")
     elif args.recent:
-        pass
-    else:
-        pass
+        print("in progress")
+    else:  # default if no options entered
+        real_time_weather.weather_now(api_key, args.city_name)
 
 
 def main():
+    import cache
+
+    cache.clean_cahe()
+
     # initialize argparse to parse user commands and get help -------------------------------------------
     # run -h or --help to see help
     import argparse
@@ -87,12 +91,12 @@ def main():
     # -----------------------------------------------------------------------------------------------
 
     # * Import fetching API Modules and data ---------------------------------------------------------
-    # from dotenv import load_dotenv
-    # from os import environ
+    from dotenv import load_dotenv
+    from os import environ
 
-    # load_dotenv()
-    # global api_key
-    # api_key = environ.get("WEATHER_API_KEY")
+    load_dotenv()
+    global api_key
+    api_key = environ.get("WEATHER_API_KEY")
     # * ----------------------------------------------------------------------------------------------
 
     while True:
