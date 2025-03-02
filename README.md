@@ -2,7 +2,7 @@
 
 A Python-based weather forecast project that uses the Tomorrow.io API to retrieve weather data.
 
-![![alt text](get real time weather usage)](docs\media\real_time_weather_usage.gif)
+![![alt text](get real time weather usage)](docs/media/real_time_weather_usage.gif)
 
 ![![alt text](project scheme)](<docs/media/project scheme.png>)
 
