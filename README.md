@@ -2,6 +2,10 @@
 
 A Python-based weather forecast project that uses the Tomorrow.io API to retrieve weather data.
 
+![alt text](real_time_weather_usage.gif)
+
+![alt text](<z__Projects_Python_Weather App_Example_get-weather_test.png>)
+
 ## Getting Started
 
 To use this project, follow these steps:
