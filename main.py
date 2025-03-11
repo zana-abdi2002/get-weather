@@ -27,6 +27,19 @@ def cli():
 
 
 def main():
+    # create two json data files ----------------------------------------------------------------------
+    from os import path
+
+    if path.exists("data/forcast_data.json") and path.exists("data/realtime_data.json"):
+        pass
+    else:
+        with open("data/forcast_data.json", "w") as f:
+            f.write("[]")
+        with open("data/realtime_data.json", "w") as f:
+            f.write("[]")
+
+    # --------------------------------------------------------------------------------------------------
+
     import components.cache as cache
 
     cache.clean_cahe()
