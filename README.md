@@ -2,7 +2,7 @@
 
 A Python-based weather forecast project that uses the Tomorrow.io API to retrieve weather data.
 
-![![alt text](get real time weather usage)](docs\media\real_time_weather_usage.gif)
+![![alt text](get real time weather usage)](docs/media/real_time_weather_usage.gif)
 
 ![![alt text](project scheme)](<docs/media/project scheme.png>)
 
@@ -10,7 +10,7 @@ A Python-based weather forecast project that uses the Tomorrow.io API to retriev
 
 To use this project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/weather-forecast.git`
+1. Clone the repository: `git clone https://github.com/zana-abdi2002/get-weather.git`
 2. Create a new file named `.env` in the root of the repository.
 3. Add the following line to the `.env` file: `API_KEY=YOUR_API_KEY_HERE`
 4. Replace `YOUR_API_KEY_HERE` with your actual Tomorrow.io API key.
